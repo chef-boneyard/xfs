@@ -22,5 +22,5 @@
 end
 
 package "xfslibs-dev" do
-  package_name "xfsprogs-devel" if platform?("redhat","centos","scientific","fedora")
+  package_name "xfsprogs-devel" if platform?("redhat","centos","scientific","amazon","fedora")
 end
