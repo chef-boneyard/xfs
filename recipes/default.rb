@@ -23,6 +23,6 @@ case node["platform_family"]
 when "debian"
   package "xfsdump"
   package "xfslibs-dev"
-when "rhel"
+when "rhel", "fedora"
   package"xfsprogs-devel"
 end
