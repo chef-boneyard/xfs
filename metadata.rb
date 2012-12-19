@@ -8,6 +8,6 @@ version          "1.0.0"
 
 recipe "xfs", "Installs packages for working with XFS"
 
-%w{ debian ubuntu }.each do |os|
+%w{ amazon debian ubuntu redhat centos scientific fedora }.each do |os|
   supports os
 end
