@@ -8,6 +8,9 @@ version          "1.1.0"
 
 recipe "xfs", "Installs packages for working with XFS"
 
-%w{ amazon debian ubuntu redhat centos scientific fedora }.each do |os|
+%w{ amazon debian ubuntu redhat centos scientific fedora oracle }.each do |os|
   supports os
 end
+
+source_url 'https://github.com/chef-cookbooks/xfs' if respond_to?(:source_url)
+issues_url 'https://github.com/chef-cookbooks/xfs/issues' if respond_to?(:issues_url)
