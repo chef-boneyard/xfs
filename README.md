@@ -1,25 +1,36 @@
-Description
-====
+xfs Cookbook
+============
+
 [![Build Status](https://travis-ci.org/chef-cookbooks/xfs.svg?branch=master)](http://travis-ci.org/chef-cookbooks/xfs)
 [![Cookbook Version](https://img.shields.io/cookbook/v/xfs.svg)](https://supermarket.chef.io/cookbooks/xfs)
 
 Installs packages for working with XFS filesystems.
 
 Requirements
-====
+------------
+#### Platforms
+- Debian/Ubuntu
+- RHEL/CentOS/Scientific/Amazon/Oracle
 
-Tested on Ubuntu 10.04, CentOS 5.5, Amazon Linux and Scientific Linux 6.0.
+#### Chef
+- Chef 11+
 
-Should work on any Debian or Red Hat family Linux distributions that
-have the xfs packages in a default repository.
+#### Cookbooks
+- none
 
-License and Author
-====
 
-Author:: Joshua Timberman (<joshua@chef.io>)
-```text
-Copyright:: 2009-2015, Chef Software, Inc.
+Usage
+-----
+Simply add `recipe[xfs]` to a run list.
 
+
+License & Authors
+-----------------
+
+**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
+
+**Copyright:** 2009-2015, Chef Software, Inc.
+```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
