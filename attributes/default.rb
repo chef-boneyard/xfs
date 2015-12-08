@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: xfs
-# Recipe:: default
+# Attributes:: default
 #
 # Copyright 2009-2015, Chef Software, Inc.
 #
@@ -17,15 +17,4 @@
 # limitations under the License.
 #
 
-package 'xfsprogs'
-
-package 'xfsdump' if node['platform_family'] == 'debian'
-
-if node['xfs']['dev_packages'] == true
-  case node['platform_family']
-  when 'debian'
-    package 'xfslibs-dev'
-  when 'rhel', 'fedora'
-    package 'xfsprogs-devel'
-  end
-end
+default['xfs']['dev_packages'] = false
