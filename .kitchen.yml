@@ -21,3 +21,8 @@ platforms:
 suites:
 - name: default
   run_list: xfs::default
+- name: dev_pkgs
+  run_list: xfs::default
+  attributes:
+    xfs:
+      dev_packages: true
