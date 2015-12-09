@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe 'default recipe on Ubuntu 14.04' do
+describe 'xfs::default' do
   let(:chef_run) do
     ChefSpec::ServerRunner.new do |node|
       node.automatic[:lsb][:codename] = 'trusty'
-    end.converge('xfs::default')
+    end.converge(described_recipe)
   end
 
   it 'installs xfsprogs' do
