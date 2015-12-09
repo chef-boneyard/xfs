@@ -11,9 +11,9 @@ describe 'xfs::default' do
     expect(chef_run).to install_package('xfsprogs')
   end
 
-  context 'dev_packages true on centos 6.7' do
+  context 'dev_packages true on centos 7.0' do
     let(:chef_run) do
-      ChefSpec::ServerRunner.new(platform: 'centos', version: '6.7') do |node|
+      ChefSpec::ServerRunner.new(platform: 'centos', version: '7.0') do |node|
         node.set['xfs']['dev_packages'] = true
       end.converge('xfs::default')
     end
