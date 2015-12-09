@@ -24,11 +24,26 @@ platforms:
 - name: centos-7
   driver:
     image: centos:7
+- name: ubuntu-12.04
+  driver:
+    image: ubuntu-upstart:12.04
+    pid_one_command: /sbin/init
+    intermediate_instructions:
+      - RUN /usr/bin/apt-get update
+      - RUN /usr/bin/apt-get install apt-transport-https net-tools -y
+  run_list:
+  - recipe[apt]
+- name: ubuntu-14.04
+  driver:
+    image: ubuntu-upstart:14.04
+    pid_one_command: /sbin/init
+  run_list:
+  - recipe[apt]
 
 suites:
 - name: default
   run_list: xfs::default
-- name: dev_pkgs
+- name: dev-pkgs
   run_list: xfs::default
   attributes:
     xfs:

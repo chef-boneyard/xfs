@@ -15,9 +15,13 @@ env:
   - INSTANCE=default-centos-5
   - INSTANCE=default-centos-6
   - INSTANCE=default-centos-7
-  - INSTANCE=dev_pkgs-centos-5
-  - INSTANCE=dev_pkgs-centos-6
-  - INSTANCE=dev_pkgs-centos-7
+  - INSTANCE=default-ubuntu-12.04
+  - INSTANCE=default-ubuntu-14.04
+  - INSTANCE=dev-pkgs-centos-5
+  - INSTANCE=dev-pkgs-centos-6
+  - INSTANCE=dev-pkgs-centos-7
+  - INSTANCE=dev-pkgs-ubuntu-12.04
+  - INSTANCE=dev-pkgs-ubuntu-14.04
 
 # Don't `bundle install`
 install: echo "skip bundle install"

@@ -21,7 +21,7 @@ platforms:
 suites:
 - name: default
   run_list: xfs::default
-- name: dev_pkgs
+- name: dev-pkgs
   run_list: xfs::default
   attributes:
     xfs:
