@@ -5,7 +5,7 @@ describe 'xfs::default recipe' do
     it { should be_installed }
   end
 
-  describe package('xfsdump'), :if => ['debian', 'ubuntu'].include?(os[:family]) do
+  describe package('xfsdump'), if: %w(debian ubuntu).include?(os[:family]) do
     it { should be_installed }
   end
 end
@@ -19,4 +19,3 @@ end
 describe package(pkg) do
   it { should be_installed }
 end
-
